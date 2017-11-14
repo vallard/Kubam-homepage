@@ -54,3 +54,32 @@ a .fa {
 .pointer {
   cursor: pointer;
 }
+
+pre {
+  font-family: monospace;
+  background-color: #000;
+  font-size: 20px;
+  color: #fff;
+  /*width: em(440); */
+  margin: 0 auto;
+  padding: 0.5em;
+  border-radius: .25em;
+  box-shadow: .1em .1em .5em rgba(0,0,0,.45);
+  line-height: 0;
+  counter-reset: line;
+}  
+
+pre span {
+    display: block;
+    line-height: 1.5rem;
+}
+
+&:before pre span {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  border-right: 1px solid #ddd;
+  padding: 0 .5em;
+  margin-right: .5em;
+  color: #888
+}
